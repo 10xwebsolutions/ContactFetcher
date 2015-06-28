@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DarkSlateGray"
+    tools:context=".Activity1" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Enter a 10 digit number"
+        android:inputType="phone" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/nameTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText1"
+        android:hint="Enter Name to search" />
+    
+    <Button
+        android:id="@+id/btnName" 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fetch by Name"
+        android:layout_below="@+id/nameTxt"
+        android:onClick="Fetcher"/>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnName"
+        android:layout_centerHorizontal="true"
+        android:background="@color/DarkSlateGray"
+        android:cacheColorHint="@android:color/transparent" >
+
+    </ListView>
+
+</RelativeLayout>
